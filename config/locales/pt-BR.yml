@@ -1,0 +1,10 @@
+pt-BR:
+  errors:
+    messages:
+      name_length: "Nome deve ter entre 5 e 128 caracteres"
+      email_invalid: "Email inválido ou maior que 128 caracteres"
+      password_length: "Senha deve ter pelo menos 10 caracteres"
+      password_digits: "Senha deve conter pelo menos 2 dígitos"
+      password_uppercase: "Senha deve conter pelo menos 2 letras maiúsculas"
+      password_lowercase: "Senha deve conter pelo menos 2 letras minúsculas"
+      password_special: "Senha deve conter pelo menos 1 caractere especial"

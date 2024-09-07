@@ -39,5 +39,11 @@ module AuthApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Set the default locale to be Brazilian Portuguese
+    config.i18n.default_locale = :'pt-BR'
+
+    # Load all locale files available inside the `config/locales` directory
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
   end
 end
