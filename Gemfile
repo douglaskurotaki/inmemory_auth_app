@@ -47,6 +47,8 @@ end
 group :test do
   # Testing framework for Rails [https://github.com/rspec/rspec-rails]
   gem 'rspec-rails'
+  # Stubs and sets expectations on HTTP requests
+  gem 'webmock'
 end
 
 group :development do
