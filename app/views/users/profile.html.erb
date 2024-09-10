@@ -1,0 +1,39 @@
+<!-- app/views/users/profile.html.erb -->
+<h1 class="text-center">Perfil do Usuário</h1>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header">
+          <h2>Informações do Usuário</h2>
+        </div>
+        <div class="card-body">
+          <p><strong>Nome:</strong> <%= @user.name %></p>
+          <p><strong>Email:</strong> <%= @user.email %></p>
+        </div>
+      </div>
+
+      <% if @location %>
+        <div class="card shadow mt-4">
+          <div class="card-header">
+            <h2>Informações de Geolocalização</h2>
+          </div>
+          <div class="card-body">
+            <p><strong>Cidade:</strong> <%= @location['city'] %></p>
+            <p><strong>Região:</strong> <%= @location['region'] %></p>
+            <p><strong>País:</strong> <%= @location['country'] %></p>
+          </div>
+        </div>
+      <% else %>
+        <div class="alert alert-warning mt-4">
+          Não foi possível obter informações de geolocalização.
+        </div>
+      <% end %>
+
+      <div class="mt-4">
+        <%= button_to 'Logout', logout_path, method: :delete, class: 'btn btn-danger' %>
+      </div>
+    </div>
+  </div>
+</div>
