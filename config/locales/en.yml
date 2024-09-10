@@ -1,10 +1,41 @@
 en:
+  activemodel:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "can't be blank"
+              too_short: "is too short (minimum: %{count} characters)"
+              too_long: "is too long (maximum: %{count} characters)"
+            email:
+              blank: "can't be blank"
+              invalid: "is not valid"
+              too_long: "is too long (maximum: %{count} characters)"
+            password:
+              blank: "can't be blank"
+              too_short: "is too short (minimum: %{count} characters)"
+              confirmation: "doesn't match confirmation"
+              password_digits: "must contain at least one digit"
+              password_uppercase: "must contain at least one uppercase letter"
+              password_lowercase: "must contain at least one lowercase letter"
+              password_special: "must contain at least one special character"
+            password_confirmation:
+              confirmation: "doesn't match"
   errors:
     messages:
-      name_length: "Name must be between 5 and 128 characters"
-      email_invalid: "Invalid email or longer than 128 characters"
-      password_length: "Password must be at least 10 characters long"
-      password_digits: "Password must contain at least 2 digits"
-      password_uppercase: "Password must contain at least 2 uppercase letters"
-      password_lowercase: "Password must contain at least 2 lowercase letters"
-      password_special: "Password must contain at least 1 special character"
+      confirmation: "doesn't match confirmation"
+      email_invalid: "Invalid email."
+      password_length: "Password must be between 10 and 72 characters."
+      password_digits: "Password must contain at least 2 digits."
+      password_uppercase: "Password must contain at least 2 uppercase letters."
+      password_lowercase: "Password must contain at least 2 lowercase letters."
+      password_special: "Password must contain at least 2 special characters."
+  sessions:
+    create:
+      success: "Login successful"
+      failure: "Invalid email or password"
+    destroy:
+      success: "Logout successful"
+  users:
+    created: "User created successfully. Please log in."

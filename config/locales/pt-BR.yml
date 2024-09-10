@@ -1,10 +1,49 @@
 pt-BR:
+  activemodel:
+    models:
+      user: "Usuário"
+    attributes:
+      user:
+        name: "Nome"
+        email: "Email"
+        password: "Senha"
+        password_confirmation: "Senha de confirmação"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "não pode ficar em branco"
+              too_short: "é muito curto (mínimo: %{count} caracteres)"
+              too_long: "é muito longo (máximo: %{count} caracteres)"
+            email:
+              blank: "não pode ficar em branco"
+              invalid: "não é válido"
+              too_long: "é muito longo (máximo: %{count} caracteres)"
+            password:
+              blank: "não pode ficar em branco"
+              too_short: "é muito curto (mínimo: %{count} caracteres)"
+              confirmation: "não corresponde à confirmação"
+              password_digits: "deve conter pelo menos um dígito"
+              password_uppercase: "deve conter pelo menos uma letra maiúscula"
+              password_lowercase: "deve conter pelo menos uma letra minúscula"
+              password_special: "deve conter pelo menos um caractere especial"
+            password_confirmation:
+              confirmation: "não corresponde"
   errors:
     messages:
-      name_length: "Nome deve ter entre 5 e 128 caracteres"
-      email_invalid: "Email inválido ou maior que 128 caracteres"
-      password_length: "Senha deve ter pelo menos 10 caracteres"
-      password_digits: "Senha deve conter pelo menos 2 dígitos"
-      password_uppercase: "Senha deve conter pelo menos 2 letras maiúsculas"
-      password_lowercase: "Senha deve conter pelo menos 2 letras minúsculas"
-      password_special: "Senha deve conter pelo menos 1 caractere especial"
+      confirmation: "não corresponde à confirmação"
+      email_invalid: "Email inválido."
+      password_length: "A senha deve ter entre 10 e 72 caracteres."
+      password_digits: "A senha deve conter pelo menos 2 dígitos."
+      password_uppercase: "A senha deve conter pelo menos 2 letras maiúsculas."
+      password_lowercase: "A senha deve conter pelo menos 2 letras minúsculas."
+      password_special: "A senha deve conter pelo menos 2 caracteres especiais."
+  sessions:
+    create:
+      success: "Login efetuado com sucesso"
+      failure: "Email ou senha inválidos"
+    destroy:
+      success: "Logout efetuado com sucesso"
+  users:
+    created: "Usuário criado com sucesso. Por favor, faça login."
