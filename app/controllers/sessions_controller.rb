@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :redirect_to_profile, only: %i[new]
   def new; end
 
   def create
@@ -19,6 +20,10 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def redirect_to_profile
+    redirect_to profile_path if session[:user_email]
+  end
 
   def session_params
     params.require(:session).permit(:email, :password)

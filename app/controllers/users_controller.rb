@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :redirect_to_login, only: %i[profile], if: -> { session[:user_email].nil? }
   def new
     @user = User.new
   end
@@ -18,6 +19,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def redirect_to_login
+    redirect_to login_path
+  end
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
