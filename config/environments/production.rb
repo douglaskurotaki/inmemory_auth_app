@@ -32,8 +32,6 @@ Rails.application.configure do
   config.assets.js_compressor = :terser
   config.assets.css_compressor = :sass
 
-  config.assets.paths << Rails.root.join('app', 'javascript', 'controllers')
-
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
