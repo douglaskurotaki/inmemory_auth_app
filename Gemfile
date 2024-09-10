@@ -34,6 +34,8 @@ gem 'faraday'
 gem 'dotenv-rails'
 # Use terser as compressor for JavaScript assets [https://github.com/ahorek/terser-ruby]
 gem 'terser'
+# Use ostruct to build data structures [https://github.com/ruby/ostruct]
+gem 'ostruct'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
