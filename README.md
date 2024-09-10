@@ -2,6 +2,8 @@
 
 AuthApp é uma aplicação de autenticação de usuários construída com Ruby on Rails. Esta aplicação permite que os usuários se cadastrem, façam login e visualizem seus perfis.
 
+https://coffeebean-auth-app.fly.dev/
+
 ## Requisitos
 
 - Ruby versão especificada em `.ruby-version`
