@@ -32,6 +32,8 @@ gem 'bcrypt'
 gem 'faraday'
 # Use dotenv to load environment variables from .env into ENV in development [https://github.com/bkeepers/dotenv]
 gem 'dotenv-rails'
+# Use terser as compressor for JavaScript assets [https://github.com/ahorek/terser-ruby]
+gem 'terser'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -52,4 +54,4 @@ group :development do
   gem 'web-console'
 end
 
-gem "dockerfile-rails", ">= 1.6", :group => :development
+gem 'dockerfile-rails', '>= 1.6', group: :development
