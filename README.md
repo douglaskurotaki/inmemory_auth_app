@@ -1,24 +1,41 @@
-# README
+# AuthApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+AuthApp é uma aplicação de autenticação de usuários construída com Ruby on Rails. Esta aplicação permite que os usuários se cadastrem, façam login e visualizem seus perfis.
 
-Things you may want to cover:
+## Requisitos
 
-* Ruby version
+- Ruby versão especificada em `.ruby-version`
+- Rails 7.2.1
+- Node.js e Yarn
 
-* System dependencies
+## Configuração
 
-* Configuration
+1. Clone o repositório:
 
-* Database creation
+   ```sh
+    git clone https://github.com/seu-usuario/auth_app.git
+    cd auth_app
+   ```
 
-* Database initialization
+2. Instale as dependências:
+  ```sh
+    bundle install
+    yarn install
+  ```
 
-* How to run the test suite
+3. Inicie o servidor:
+  ```sh
+    rails server
+  ```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+## Testes
+Para rodar a suíte de testes, execute:
+  ```sh
+    bundle exec rspec
+  ```
+Esse projeto possui simplecov que é uma gem que verfifica a cobertura de testes. Para rodar olhando a cobertura:
+  ```sh
+    COVERAGE=true bundle exec rspec
+  ```
+  
