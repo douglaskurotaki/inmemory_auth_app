@@ -9,6 +9,21 @@ require 'rspec/rails'
 require 'webmock/rspec'
 WebMock.disable_net_connect!(allow_localhost: true)
 
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
+require 'simplecov'
+SimpleCov.start do
+  add_group 'Adapters', 'app/adapters'
+  add_group 'Controllers', 'app/controllers'
+  add_group 'Gateways', 'app/gateways'
+  add_group 'Models', 'app/models'
+end
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

@@ -45,8 +45,14 @@ group :development, :test do
 end
 
 group :test do
+  # JSON formatter for SimpleCov output
+  gem 'simplecov'
+  # Testing framework for Rails [https://github.com/rails/rails-controller-testing]
+  gem 'rails-controller-testing'
   # Testing framework for Rails [https://github.com/rspec/rspec-rails]
   gem 'rspec-rails'
+  # Provides RSpec- and Minitest-compatible one-liners to test common Rails functionalities
+  gem 'shoulda-matchers'
   # Stubs and sets expectations on HTTP requests
   gem 'webmock'
 end
