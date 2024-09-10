@@ -26,6 +26,12 @@ gem 'bootstrap', '~> 5.3.3'
 gem 'rack'
 # Use Rack middleware to add CORS headers [https://github.com/sass/sassc-rails]
 gem 'sassc-rails'
+# Use Rack middleware to add CORS headers [https://github.com/bcrypt-ruby/bcrypt-ruby]
+gem 'bcrypt'
+# Use faraday to make HTTP requests [https://github.com/lostisland/faraday]
+gem 'faraday'
+# Use dotenv to load environment variables from .env into ENV in development [https://github.com/bkeepers/dotenv]
+gem 'dotenv-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
